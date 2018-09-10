@@ -1,0 +1,310 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: "微软雅黑";
+  letter-spacing: 2px;
+  transition: all 0.3 ease-in-out;
+}
+
+a{
+  text-decoration: none;
+  color: #2c2c2c;
+}
+
+.tab-nav li, .tab-show li, .list li{
+  list-style-type: none;
+  float: left;
+}
+
+header{
+  background-color: #2c2c2c;
+  color: #fff;
+  padding-top: 20px;
+  border-bottom: 5px solid #005962;
+}
+
+header a{
+  color: #fff;
+}
+
+.nav{
+  position: relative;
+  width: 100%;
+  height: 110px;
+  margin: auto;
+  border-bottom: 5px solid #bca78b;
+}
+
+.nav img{
+  vertical-align: middle;
+}
+
+.left, .right{
+  display: inline-block;
+  margin: 0 20px;
+}
+
+.right{
+  position: absolute;
+  right: 0;
+}
+
+.nav-box{
+  width: 1200px;
+  margin:auto;
+  font-size: 14px;
+}
+
+.nav-box a{
+  display: inline-block;
+  margin: 0 30px;
+  text-align: center;
+  height: 20px;
+  overflow: hidden;
+}
+
+.nav-box a:nth-last-of-type(5){
+  height: 42px;
+}
+
+.nav-box li{
+  list-style-type: none;
+}
+
+.nav-box ul:hover{
+  transition: all 0.3s ease-in-out;
+  color: #b09b72;
+  margin-top: -20px;
+}
+
+
+.swiper-container-top {
+  width: 100%;
+  height: auto;
+  border-bottom: 5px solid #005962;
+}
+
+.swiper-slide-top img{
+  width: 100%;
+  height: auto;
+}
+
+.tittle-text{
+  margin-top: 30px;
+  margin-bottom: 10px;
+  padding-bottom: 30px;
+  width: 100%;
+  color: #005962;
+  text-align: center;
+  line-height: 50px;
+  border-bottom: 1px solid #828282;
+}
+
+.tittle-list{
+  background: #005962;
+  width: 100%;
+  height: 350px;
+  color: #b09b72;
+}
+
+.list{
+  margin: auto;
+  text-align: center;
+  max-width: 1300px;
+  width: 100%;
+  height: 200px;
+}
+
+.list li{
+  display: block;
+  position: relative;
+  width: 65px;
+  padding-top: 40px;
+  margin: 0 30px;
+  text-align: center;
+  font-size: 13px;
+}
+
+.list li:hover{
+  color: #f0d6b0;
+}
+
+.list img{
+  width: 44px;
+  height: 44px;
+  margin-bottom: 20px;
+}
+
+.list li::before{
+  content: "";
+  background: url(img/circle.png) no-repeat center center;
+  width: 65px;
+  height: 65px;
+  position: absolute;
+  top: 30px;
+  left: 0;
+  transform:rotate(90deg);
+}
+
+.tittle-content{
+  margin: auto;
+  padding-top: 10px;
+  text-align: center;
+  width: 50%;
+  min-width: 600px;
+  height: 100px;
+  border: 1px solid #b09b72;
+}
+
+.block-tittle{
+  width: 400px;
+  height: 110px;
+  text-align: center;
+  margin: 30px auto;
+  padding: 10px;
+  line-height: 2;
+  border: 1px solid #2c2c2c;
+}
+
+.block-tittle a{
+  box-sizing: border-box;
+  display: block;
+  color: #2c2c2c;
+  padding-top: 15px;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #828282;
+}
+
+.block-1{
+  border-bottom: 1px solid #828282;
+}
+
+.block-tab{
+  width: 100%;
+  height: 720px;
+}
+
+.tab-nav{
+  display: block;
+  width: 600px;
+  height: 50px;
+  padding: 20px 0;
+  margin: 10px auto;
+  border-bottom: 1px solid #828282;
+}
+
+.tab-nav li{
+  width: 200px;
+  text-align: center;
+  font-size: 18px;
+}
+
+.tab-show{
+  width: 100%;
+  height: auto;
+}
+
+.show{
+  height: 200px;
+  background-size: cover;
+  background-position: center center;
+  transition: all 0.3s ease-in-out;
+}
+
+.show:hover{
+  transform: scale3d(1.1, 1.1, 1.1);
+}
+
+.p-btn{
+  box-sizing: border-box;
+  line-height: 1.8;
+  height: 200px;
+  opacity: 0.8;
+  border: 3px solid #005962;
+}
+
+.block-2, .block-3{
+  width: 100%;
+  height: auto;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #828282;
+}
+
+.container{
+  min-width: 1000px;
+  width: 100%;
+  height: 700px;
+  position: relative;
+  background-color: #383838;
+}
+
+.text-content{
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-left: 10px;
+  padding-top: 10px;
+  color: #e1e1e1;
+}
+
+.t-1{
+  margin-top: 60px;
+  width: 500px;
+  height: 60px;
+  font-size:13px;
+  background-color: rgba(56, 56, 56, 0.25);
+  line-height: 1.5;
+}
+
+.t-2{
+  margin-top: 60px;
+  margin-left: -10px;
+  width: 300px;
+  height: 50px;
+  font-size:13px;
+  line-height: 1.9;
+  padding-left: 15px;
+  background-color: #005962;
+}
+
+.content-bg div{
+  box-sizing: border-box;
+  float: right;
+  margin-right: 10px;  
+  width: 24%;
+  height: 700px;
+}
+
+.bg-1, .bg-2, .bg-3{
+  background-position: center center;
+  background-size: cover;
+}
+
+.swiper-container-botm{
+  margin-bottom: 100px;
+  width: 900px;
+  height: 100%;
+}
+
+.swiper-slide-botm{
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+  box-shadow: 5px 5px 10px rgba(56, 56, 56, 0.25);
+  box-shadow: -5px -5px 10px rgba(56, 56, 56, 0.25);
+}
+
+.swiper-slide-botm p{
+  color: #828282;
+}
+
+.swiper-container-botm h3{
+  font-size: 18px;
+  color: #5f5f5f;
+}
+
+.swiper-slide-botm img{
+  width: 100%;
+  height: auto;
+}
