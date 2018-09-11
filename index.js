@@ -1,5 +1,5 @@
 var vm = new Vue({
-	el: 'main',
+	el: '#main',
 	data: {
 		activeTab: 'first'
 	},
@@ -8,4 +8,4 @@ var vm = new Vue({
 			this.activeTab = tabName;
 		}
 	}
-})
+});

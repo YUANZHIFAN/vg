@@ -1,334 +1,318 @@
 <!DOCTYPE html>
 <head>
-  <meta charset="UTF-8">
-  <title>vouguer</title>
-  <script src="index.js"></script>
-  <link rel="stylesheet" type="text/css" href="index.css"/>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/css/swiper.min.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/js/swiper.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
-  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+	<meta charset="UTF-8">
+	<title>vouguer</title>
+	<link rel="stylesheet" type="text/css" href="index.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/css/swiper.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/js/swiper.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
 <body>
-  <!--顶部导航-->
-  <header>
-    <div class="nav">
-      <div class="left">
-        <img src="img/user-face.png">
-        <a href="#">登录</a>
-        <a href="#">/ 注册</a>
-      </div>
-      <div class="right">
-        <a href="#"><img src="img/search.png"></a>
-        <a><img src="img/shop.png"></a>
-      </div>
-      <div class="nav-box">
-        <a href="#">
-          <ul>
-            <li>HOME</li>
-            <li>首页</li>
-          </ul>
-        </a>
-        <a href="#">
-          <ul>
-            <li>COMPANY</li>
-            <li>品牌</li>
-          </ul>
-        </a>
-        <a href="#">
-          <ul>
-            <li>COLLECTION</li>
-            <li>产品中心</li>
-          </ul>
-        </a>
-        <a href="#"><img src="img/logo.png"></a>
-        <a href="#">
-          <ul>
-            <li>SERVICE</li>
-            <li>服务</li>
-          </ul>
-        </a>
-        <a href="#">
-          <ul>
-            <li>NEWS</li>
-            <li>新闻</li>
-          </ul>
-        </a>
-        <a href="#">
-          <ul>
-            <li>CONTACT</li>
-            <li>联系</li>
-          </ul>
-        </a>
-        <a href="#">
-          <ul>
-            <li>JOIN</li>
-            <li>加盟</li>
-          </ul>
-        </a>
-      </div>
-    </div>
-  </header>
-  <div class="main" id="main">
-    <!-- Swiper -->
-    <div class="swiper-container swiper-container-top">
-        <div class="swiper-wrapper swiper-wrapper-top">
-          <div class="swiper-slide swiper-slide-top"><img src="img/nav-banner-1.jpg"></div>
-          <div class="swiper-slide swiper-slide-top"><img src="img/nav-banner-1.jpg"></div>
-        </div>
-        <!-- Add Pagination -->
-      <div class="swiper-pagination"></div>
-    </div>
-    <!--标题-->
-    <div class="tittle-text">
-      <h1>FOCUS ON LIFE KNOW MORE ABOUT CUSTOMIZE</h1>
-      <h2>专注生活，更懂定制</h2>
-    </div>
-    <div class="tittle-list">
-      <div class="list">
-        <ul>
-          <li>
-            <img src="img/service-icon-1.png">
-            <h3>SCALE</h3>
-            <p>免费量尺</p>
-          </li>
-          <li>
-            <div>
-              <img src="img/service-icon-1.png">
-            </div>
-              <h3>SCALE</h3>
-              <p>免费量尺</p>
-          </li>
-          <li>
-              <img src="img/service-icon-1.png">
-              <h3>SCALE</h3>
-              <p>免费量尺</p>
-          </li>
-          <li>
-              <img src="img/service-icon-1.png">
-              <h3>SCALE</h3>
-              <p>免费量尺</p>
-            </li>
-          <li>
-              <img src="img/service-icon-1.png">
-              <h3>SCALE</h3>
-              <p>免费量尺</p>
-          </li>
-          <li>
-              <img src="img/service-icon-1.png">
-              <h3>SCALE</h3>
-              <p>免费量尺</p>
-          </li>
-          <li>
-              <img src="img/service-icon-1.png">
-              <h3>SCALE</h3>
-              <p>免费量尺</p>
-          </li>
-          <li>
-              <img src="img/service-icon-1.png">
-              <h3>SCALE</h3>
-              <p>免费量尺</p>
-          </li>
-          <li>
-              <img src="img/service-icon-1.png">
-              <h3>SCALE</h3>
-              <p>免费量尺</p>
-          </li>
-        </ul>
-      </div>
-      <div class="tittle-content">  
-        <h1>CUSTOMERS ARE EVERYTHING</h1>
-        <p>一切以客户为中心</p>
-        <p>服务热线 : 400-600-0757</p>
-      </div>
-    </div>
-    <!--产品和生活-->
-    <div class="block-1">
-      <div class="block-tittle">
-        <a>
-          <h2>MY HOME＆MY LIFE</h2>
-          <p>产品和生活</p>
-        </a>
-      </div>
-      <div class="block-tab">
-        <ul class="tab-nav">
-          <li @click="changeTab(first)">
-            <p>BEDROOM</p>
-            <p>卧室</p>
-          </li>
-          <li @click="changeTab(second)">
-            <p>LIVING ROOM</p>
-            <p>客厅</p>
-          </li>
-          <li @click="changeTab(third)">
-            <p>DINING ROOM</p>
-            <p>餐厅</p>
-          </li>
-        </ul>
-        <ul class="tab-show" v-show="activeTab === 'first'">
-          <li class="p-1 show" style="background-image: url(img/卧室_空间定制1.jpg);width: 26%;"></li>
-          <li class="p-2 show" style="background-image: url(img/卧室_空间定制2.jpg);width: 22%;"></li>
-          <li class="p-3 show" style="background-image: url(img/卧室_空间定制1.jpg);width: 26%;"></li>
-          <li class="p-4 show" style="background-image: url(img/卧室_空间定制2.jpg);width: 26%;"></li>
-          <li class="p-5 show" style="background-image: url(img/卧室_空间定制1.jpg);width: 48%; height: 400px;"></li>
-          <li class="p-btn" style="width: 10%; text-align: center;padding-top: 60px">
-            <a href="#">
-              <h3>CLICK MORE</h3>
-              <p>点击更多</p>
-            </a>
-          </li>
-          <li class="p-6 show" style="background-image: url(img/卧室_空间定制1.jpg);width: 20%;"></li>
-          <li class="p-7 show" style="background-image: url(img/卧室_空间定制2.jpg);width: 22%;"></li>
-          <li class="p-8 show" style="background-image: url(img/卧室_空间定制2.jpg);width: 26%;"></li>
-          <li class="p-9 show" style="background-image: url(img/卧室_空间定制1.jpg);width: 26%;"></li>
-        </ul>
-        <ul class="tab-show" v-show="activeTab === 'second'">
-          <li class="p-1 show" style="background-image: url(img/卧室_空间定制2.jpg);width: 26%;"></li>
-          <li class="p-2 show" style="background-image: url(img/卧室_空间定制2.jpg);width: 22%;"></li>
-          <li class="p-3 show" style="background-image: url(img/卧室_空间定制2.jpg);width: 26%;"></li>
-          <li class="p-4 show" style="background-image: url(img/卧室_空间定制2.jpg);width: 26%;"></li>
-          <li class="p-5 show" style="background-image: url(img/卧室_空间定制2.jpg);width: 48%; height: 400px;"></li>
-          <li class="p-btn" style="width: 10%; text-align: center;padding-top: 60px">
-            <a href="#">
-              <h3>CLICK MORE</h3>
-              <p>点击更多</p>
-            </a>
-          </li>
-          <li class="p-6 show" style="background-image: url(img/卧室_空间定制1.jpg);width: 20%;"></li>
-          <li class="p-7 show" style="background-image: url(img/卧室_空间定制2.jpg);width: 22%;"></li>
-          <li class="p-8 show" style="background-image: url(img/卧室_空间定制2.jpg);width: 26%;"></li>
-          <li class="p-9 show" style="background-image: url(img/卧室_空间定制1.jpg);width: 26%;"></li>
-        </ul>
-        <ul class="tab-show" v-show="activeTab === 'third'">
-          <li class="p-1 show" style="background-image: url(img/卧室_空间定制1.jpg);width: 26%;"></li>
-          <li class="p-2 show" style="background-image: url(img/卧室_空间定制2.jpg);width: 22%;"></li>
-          <li class="p-3 show" style="background-image: url(img/卧室_空间定制1.jpg);width: 26%;"></li>
-          <li class="p-4 show" style="background-image: url(img/卧室_空间定制2.jpg);width: 26%;"></li>
-          <li class="p-5 show" style="background-image: url(img/卧室_空间定制1.jpg);width: 48%; height: 400px;"></li>
-          <li class="p-btn" style="width: 10%; text-align: center;padding-top: 60px">
-            <a href="#">
-              <h3>CLICK MORE</h3>
-              <p>点击更多</p>
-            </a>
-          </li>
-          <li class="p-6 show" style="background-image: url(img/卧室_空间定制1.jpg);width: 20%;"></li>
-          <li class="p-7 show" style="background-image: url(img/卧室_空间定制2.jpg);width: 22%;"></li>
-          <li class="p-8 show" style="background-image: url(img/卧室_空间定制2.jpg);width: 26%;"></li>
-          <li class="p-9 show" style="background-image: url(img/卧室_空间定制1.jpg);width: 26%;"></li>
-        </ul>
-      </div>
-    </div>
-    <!--品牌-->
-    <div class="block-2">
-      <div class="block-tittle">
-        <a>
-          <h2>COMPANY</h2>
-          <p>品牌</p>
-        </a>
-      </div>
-      <div class="container">
-        <div class="text-content">
-          <h1 style="letter-spacing: 10px">THE WAY OF BRAND CHANGE</h1>
-          <h3>沃的品牌之道</h3>
-          <p class="t-1">10年来沃格人怀惴梦想起航挑起定制的序幕<br>
-            10年来专注于建材家居定制行业与匠心制造，创造一个又一个温馨的家<br>
-            10年来我们用心服务与强者同行，成就一个又一个经典客户
-          </p>
-          <p class="t-2">未来每一天都是一个新的起点<br>
-            让梦想绽放，让梦想继续前行......  
-          </p>
-          <p class="t-3" style="margin-top: 200px;">
-            <h3>A TRUSTWORTHY TEAM DEDICATED TO WELL-BEING</h3>
-            <h6>一个为生活而定制的靠谱团队</h6>
-          </p>
-        </div>
-        <div class="content-bg">
-          <div class="bg-1" style="background-image: url(img/index-company-text-2.png);"></div>
-          <div class="bg-2" style="background-image: url(img/index-company-text-2.png);"></div>
-          <div class="bg-2" style="background-image: url(img/index-company-1.png);"></div>
-        </div>
-      </div>
-    </div>
-    <!--新闻资讯-->
-    <div class="block-3">
-      <div class="block-tittle">
-        <a>
-          <h2>NEWS AND INFORMATION</h2>
-          <p>新闻资讯</p>
-        </a>
-      </div>
-      <!-- Swiper -->
-      <div class="swiper-container swiper-container-botm">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide swiper-slide-botm">
-          	<div>
-            <img src="img/index-news-3.png">
-            <h3>蓄力待发，青春毕业季</h3>
-            <p>世人皆知“青春美梦不可负”
-                因为日后必会对 心中所向始终念念不忘！
-                世人还知“机会总稍纵即逝”</p>
-            <p style="margin-top: 30px;">2018/8/16 17:59:32</p>
-            </div>
-          </div>
-          <div class="swiper-slide swiper-slide-botm">
-          	<div>
-            <img src="img/index-news-3.png">
-            <h3>蓄力待发，青春毕业季</h3>
-            <p>世人皆知“青春美梦不可负”
-                因为日后必会对 心中所向始终念念不忘！
-                世人还知“机会总稍纵即逝”</p>
-            <p style="margin-top: 30px;">2018/8/16 17:59:32</p>
-            </div>
-          </div>
-          <div class="swiper-slide swiper-slide-botm">
-          	<div>
-            <img src="img/index-news-3.png">
-            <h3>蓄力待发，青春毕业季</h3>
-            <p>世人皆知“青春美梦不可负”
-                因为日后必会对 心中所向始终念念不忘！
-                世人还知“机会总稍纵即逝”</p>
-            <p style="margin-top: 30px;">2018/8/16 17:59:32</p>
-            </div>
-          </div>
-        </div>
-        <!-- Add Arrows -->
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-      </div>
-    </div>
-  <script>        
-    var swiperTop = new Swiper('.swiper-container-top', {
-      spaceBetween: 30,
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-    });
+	<!--顶部导航-->
+	<header>
+		<div class="nav">
+			<div class="left">
+				<img src="img/user-face.png">
+				<a href="#">登录</a>
+				<a href="#">/ 注册</a>
+			</div>
+			<div class="right">
+				<a href="#"><img src="img/search.png"></a>
+				<a><img src="img/shop.png"></a>
+			</div>
+			<div class="nav-box">
+				<a href="#">
+					<ul>
+						<li>HOME</li>
+						<li>首页</li>
+					</ul>
+				</a>
+				<a href="#">
+					<ul>
+						<li>COMPANY</li>
+						<li>品牌</li>
+					</ul>
+				</a>
+				<a href="#">
+					<ul>
+						<li>COLLECTION</li>
+						<li>产品中心</li>
+					</ul>
+				</a>
+				<a href="#"><img src="img/logo.png"></a>
+				<a href="#">
+					<ul>
+						<li>SERVICE</li>
+						<li>服务</li>
+					</ul>
+				</a>
+				<a href="#">
+					<ul>
+						<li>NEWS</li>
+						<li>新闻</li>
+					</ul>
+				</a>
+				<a href="#">
+					<ul>
+						<li>CONTACT</li>
+						<li>联系</li>
+					</ul>
+				</a>
+				<a href="#">
+					<ul>
+						<li>JOIN</li>
+						<li>加盟</li>
+					</ul>
+				</a>
+			</div>
+		</div>
+	</header>
+	<div class="main" id="main">
+		<!-- Swiper -->
+		<div class="swiper-container swiper-container-top">
+			<div class="swiper-wrapper swiper-wrapper-top">
+				<div class="swiper-slide swiper-slide-top"><img src="img/nav-banner-1.jpg"></div>
+				<div class="swiper-slide swiper-slide-top"><img src="img/nav-banner-1.jpg"></div>
+			</div>
+			<!-- Add Pagination -->
+			<div class="swiper-pagination"></div>
+		</div>
+		<!--标题-->
+		<div class="tittle-text">
+			<h1>FOCUS ON LIFE KNOW MORE ABOUT CUSTOMIZE</h1>
+			<h2>专注生活，更懂定制</h2>
+		</div>
+		<div class="tittle-list">
+			<div class="list">
+				<ul>
+					<li>
+						<img src="img/service-icon-1.png">
+						<h3>SCALE</h3>
+						<p>免费量尺</p>
+					</li>
+					<li>
+						<div>
+							<img src="img/service-icon-1.png">
+						</div>
+						<h3>SCALE</h3>
+						<p>免费量尺</p>
+					</li>
+					<li>
+						<img src="img/service-icon-1.png">
+						<h3>SCALE</h3>
+						<p>免费量尺</p>
+					</li>
+					<li>
+						<img src="img/service-icon-1.png">
+						<h3>SCALE</h3>
+						<p>免费量尺</p>
+					</li>
+					<li>
+						<img src="img/service-icon-1.png">
+						<h3>SCALE</h3>
+						<p>免费量尺</p>
+					</li>
+					<li>
+						<img src="img/service-icon-1.png">
+						<h3>SCALE</h3>
+						<p>免费量尺</p>
+					</li>
+					<li>
+						<img src="img/service-icon-1.png">
+						<h3>SCALE</h3>
+						<p>免费量尺</p>
+					</li>
+					<li>
+						<img src="img/service-icon-1.png">
+						<h3>SCALE</h3>
+						<p>免费量尺</p>
+					</li>
+					<li>
+						<img src="img/service-icon-1.png">
+						<h3>SCALE</h3>
+						<p>免费量尺</p>
+					</li>
+				</ul>
+			</div>
+			<div class="tittle-content">
+				<h1>CUSTOMERS ARE EVERYTHING</h1>
+				<p>一切以客户为中心</p>
+				<p>服务热线 : 400-600-0757</p>
+			</div>
+		</div>
+		<!--产品和生活-->
+		<div class="block-1">
+			<div class="block-tittle">
+				<a>
+					<h2>MY HOME＆MY LIFE</h2>
+					<p>产品和生活</p>
+				</a>
+			</div>
+			<div class="block-tab">
+				<ul class="tab-nav">
+					<li @click="changeTab('first')">
+						<p>BEDROOM</p>
+						<p>卧室</p>
+					</li>
+					<li @click="changeTab('second')">
+						<p>LIVING ROOM</p>
+						<p>客厅</p>
+					</li>
+					<li @click="changeTab('third')">
+						<p>DINING ROOM</p>
+						<p>餐厅</p>
+					</li>
+				</ul>
+				<ul class="tab-show" v-show="activeTab === 'first'">
+					<li class="p-1 show" style="background-image: url(img/卧室_空间定制1.jpg);width: 26%;"></li>
+					<li class="p-2 show" style="background-image: url(img/卧室_空间定制2.jpg);width: 22%;"></li>
+					<li class="p-3 show" style="background-image: url(img/卧室_空间定制1.jpg);width: 26%;"></li>
+					<li class="p-4 show" style="background-image: url(img/卧室_空间定制2.jpg);width: 26%;"></li>
+					<li class="p-5 show" style="background-image: url(img/卧室_空间定制1.jpg);width: 48%; height: 400px;"></li>
+					<li class="p-btn" style="width: 10%; text-align: center;padding-top: 60px">
+						<a href="#">
+							<h3>CLICK MORE</h3>
+							<p>点击更多</p>
+						</a>
+					</li>
+					<li class="p-6 show" style="background-image: url(img/卧室_空间定制1.jpg);width: 20%;"></li>
+					<li class="p-7 show" style="background-image: url(img/卧室_空间定制2.jpg);width: 22%;"></li>
+					<li class="p-8 show" style="background-image: url(img/卧室_空间定制2.jpg);width: 26%;"></li>
+					<li class="p-9 show" style="background-image: url(img/卧室_空间定制1.jpg);width: 26%;"></li>
+				</ul>
+				<ul class="tab-show" v-show="activeTab === 'second'">
+					<li class="p-1 show" style="background-image: url(img/卧室_空间定制2.jpg);width: 26%;"></li>
+					<li class="p-2 show" style="background-image: url(img/卧室_空间定制2.jpg);width: 22%;"></li>
+					<li class="p-3 show" style="background-image: url(img/卧室_空间定制2.jpg);width: 26%;"></li>
+					<li class="p-4 show" style="background-image: url(img/卧室_空间定制2.jpg);width: 26%;"></li>
+					<li class="p-5 show" style="background-image: url(img/卧室_空间定制2.jpg);width: 48%; height: 400px;"></li>
+					<li class="p-btn" style="width: 10%; text-align: center;padding-top: 60px">
+						<a href="#">
+							<h3>CLICK MORE</h3>
+							<p>点击更多</p>
+						</a>
+					</li>
+					<li class="p-6 show" style="background-image: url(img/卧室_空间定制1.jpg);width: 20%;"></li>
+					<li class="p-7 show" style="background-image: url(img/卧室_空间定制2.jpg);width: 22%;"></li>
+					<li class="p-8 show" style="background-image: url(img/卧室_空间定制2.jpg);width: 26%;"></li>
+					<li class="p-9 show" style="background-image: url(img/卧室_空间定制1.jpg);width: 26%;"></li>
+				</ul>
+				<ul class="tab-show" v-show="activeTab === 'third'">
+					<li class="p-1 show" style="background-image: url(img/卧室_空间定制1.jpg);width: 26%;"></li>
+					<li class="p-2 show" style="background-image: url(img/卧室_空间定制2.jpg);width: 22%;"></li>
+					<li class="p-3 show" style="background-image: url(img/卧室_空间定制1.jpg);width: 26%;"></li>
+					<li class="p-4 show" style="background-image: url(img/卧室_空间定制2.jpg);width: 26%;"></li>
+					<li class="p-5 show" style="background-image: url(img/卧室_空间定制1.jpg);width: 48%; height: 400px;"></li>
+					<li class="p-btn" style="width: 10%; text-align: center;padding-top: 60px">
+						<a href="#">
+							<h3>CLICK MORE</h3>
+							<p>点击更多</p>
+						</a>
+					</li>
+					<li class="p-6 show" style="background-image: url(img/卧室_空间定制1.jpg);width: 20%;"></li>
+					<li class="p-7 show" style="background-image: url(img/卧室_空间定制2.jpg);width: 22%;"></li>
+					<li class="p-8 show" style="background-image: url(img/卧室_空间定制2.jpg);width: 26%;"></li>
+					<li class="p-9 show" style="background-image: url(img/卧室_空间定制1.jpg);width: 26%;"></li>
+				</ul>
+			</div>
+		</div>
+		<!--品牌-->
+		<div class="block-2">
+			<div class="block-tittle">
+				<a>
+					<h2>COMPANY</h2>
+					<p>品牌</p>
+				</a>
+			</div>
+			<div class="container">
+				<div class="text-content">
+					<h1 style="letter-spacing: 10px">THE WAY OF BRAND CHANGE</h1>
+					<h3>沃的品牌之道</h3>
+					<p class="t-1">10年来沃格人怀惴梦想起航挑起定制的序幕<br> 10年来专注于建材家居定制行业与匠心制造，创造一个又一个温馨的家
+						<br> 10年来我们用心服务与强者同行，成就一个又一个经典客户
+					</p>
+					<p class="t-2">未来每一天都是一个新的起点<br> 让梦想绽放，让梦想继续前行......
+					</p>
+					<p class="t-3" style="margin-top: 200px;">
+						<h3>A TRUSTWORTHY TEAM DEDICATED TO WELL-BEING</h3>
+						<h6>一个为生活而定制的靠谱团队</h6>
+					</p>
+				</div>
+				<div class="content-bg">
+					<div class="bg-1" style="background-image: url(img/index-company-text-2.png);"></div>
+					<div class="bg-2" style="background-image: url(img/index-company-text-2.png);"></div>
+					<div class="bg-2" style="background-image: url(img/index-company-1.png);"></div>
+				</div>
+			</div>
+		</div>
+		<!--新闻资讯-->
+		<div class="block-3">
+			<div class="block-tittle">
+				<a>
+					<h2>NEWS AND INFORMATION</h2>
+					<p>新闻资讯</p>
+				</a>
+			</div>
+			<!-- Swiper -->
+			<div class="swiper-container swiper-container-botm">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide swiper-slide-botm">
+						<div>
+							<img src="img/index-news-3.png">
+							<h3>蓄力待发，青春毕业季</h3>
+							<p>世人皆知“青春美梦不可负” 因为日后必会对 心中所向始终念念不忘！ 世人还知“机会总稍纵即逝”
+							</p>
+							<p style="margin-top: 30px;">2018/8/16 17:59:32</p>
+						</div>
+					</div>
+					<div class="swiper-slide swiper-slide-botm">
+						<div>
+							<img src="img/index-news-3.png">
+							<h3>蓄力待发，青春毕业季</h3>
+							<p>世人皆知“青春美梦不可负” 因为日后必会对 心中所向始终念念不忘！ 世人还知“机会总稍纵即逝”
+							</p>
+							<p style="margin-top: 30px;">2018/8/16 17:59:32</p>
+						</div>
+					</div>
+					<div class="swiper-slide swiper-slide-botm">
+						<div>
+							<img src="img/index-news-3.png">
+							<h3>蓄力待发，青春毕业季</h3>
+							<p>世人皆知“青春美梦不可负” 因为日后必会对 心中所向始终念念不忘！ 世人还知“机会总稍纵即逝”
+							</p>
+							<p style="margin-top: 30px;">2018/8/16 17:59:32</p>
+						</div>
+					</div>
+				</div>
+				<!-- Add Arrows -->
+				<div class="swiper-button-next"></div>
+				<div class="swiper-button-prev"></div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		var swiperTop = new Swiper('.swiper-container-top', {
+			spaceBetween: 30,
+			pagination: {
+				el: '.swiper-pagination',
+				clickable: true,
+			},
+		});
 
-    var swiperBotm = new Swiper('.swiper-container-botm', {
-      slidesPerView: 3,
-      spaceBetween: 30,
-      slidesPerGroup: 3,
-      loop: true,
-      loopFillGroupWithBlank: true,
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-    });
-
-    var tabs = new Vue({
-        el: '#main',
-        data: {
-          activeTab: 'first'
-        },
-        methods: {
-          changeTab(tabName) {
-            this.activeTab = tabName;
-          }
-        }
-      });
-
-  </script>
+		var swiperBotm = new Swiper('.swiper-container-botm', {
+			slidesPerView: 3,
+			spaceBetween: 30,
+			slidesPerGroup: 3,
+			loop: true,
+			loopFillGroupWithBlank: true,
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
+		});
+	</script>
+	<script src="index.js" type="text/javascript" charset="utf-8"></script>
 </body>
+
 </html>

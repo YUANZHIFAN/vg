@@ -72,7 +72,7 @@ header a{
 }
 
 .nav-box ul:hover{
-  transition: all 0.3s ease-in-out;
+  transition: all 0.3s;
   color: #b09b72;
   margin-top: -20px;
 }
@@ -209,6 +209,7 @@ header a{
 .tab-show{
   width: 100%;
   height: auto;
+  transition: all 0.3 ease-in-out;
 }
 
 .show{
@@ -291,16 +292,12 @@ header a{
 
 .swiper-container-botm{
   margin-bottom: 100px;
-  width: 900px;
-  height: 100%;
-}
-
-.swiper-slide-botm{
-  padding: 20px;
+  width: 1200px;
+  height: 540px;
 }
 
 .swiper-slide-botm div{
-	margin: auto;
+	margin: 40px;
 	width: 300px;
 	height: 500px;
 	text-align: center;
